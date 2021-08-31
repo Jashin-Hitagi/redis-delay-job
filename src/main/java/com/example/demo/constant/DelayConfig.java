@@ -1,7 +1,7 @@
 package com.example.demo.constant;
 
 /**
- * @author yunyou
+ * @author Jashin
  */
 public class DelayConfig {
 

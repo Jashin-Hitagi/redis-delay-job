@@ -20,7 +20,7 @@ import java.util.stream.IntStream;
 
 /**
  * Delay Bucket是一组以时间为维度的有序队列，用来存放所有需要延迟的／已经被reserve的Job（这里只存放Job Id）
- * @author yunyou
+ * @author Jashin
  */
 @Slf4j
 @Component
@@ -64,7 +64,7 @@ public class DelayBucket {
     /**
      * 放入延时任务
      */
-    private void addDelayJob(DelayJob job){
+    public void addDelayJob(DelayJob job){
         log.info("添加延迟任务:{}", JSON.toJSONString(job));
         BoundZSetOperations bucket = getBucket(getThisBucketName());
         bucket.add(job,job.getDelayDate());

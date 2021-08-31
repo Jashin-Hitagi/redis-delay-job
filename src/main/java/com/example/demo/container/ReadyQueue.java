@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 
 /**
  * Ready Queue存放处于Ready状态的Job（这里只存放Job topic），以供消费程序消费。
- * @author yunyou
+ * @author Jashin
  */
 @Slf4j
 @Component

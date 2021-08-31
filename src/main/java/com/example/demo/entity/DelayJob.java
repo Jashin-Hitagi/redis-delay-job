@@ -7,7 +7,7 @@ import java.io.Serializable;
 
 /**
  * 任务引用的对象
- * @author yunyou
+ * @author Jashin
  */
 
 @Data

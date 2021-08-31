@@ -1,7 +1,7 @@
 package com.example.demo.constant;
 
 /**
- * @author yunyou
+ * @author Jashin
  * 任务状态
  */
 public enum JobStatus {

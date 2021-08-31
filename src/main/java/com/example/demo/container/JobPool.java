@@ -1,6 +1,7 @@
 package com.example.demo.container;
 
 import com.alibaba.fastjson.JSON;
+import com.example.demo.constant.JobStatus;
 import com.example.demo.entity.Job;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -8,8 +9,10 @@ import org.springframework.data.redis.core.BoundHashOperations;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Component;
 
+import java.util.Optional;
+
 /**
- * @author yunyou
+ * @author Jashin
  */
 @Component
 @Slf4j
@@ -58,6 +61,9 @@ public class JobPool {
      */
     public void removeDelayJob(Long jobId){
         log.info("任务池移除任务,{}",jobId);
+        Job job = getJob(jobId);
+        Optional.ofNullable(job)
+                .ifPresent(job1 -> job1.setStatus(JobStatus.DELETED));
         //移除任务
         getPool().delete(jobId);
     }

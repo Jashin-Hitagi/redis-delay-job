@@ -13,7 +13,7 @@ import java.util.stream.IntStream;
 
 /**
  * Timer负责实时扫描各个Bucket，并将delay时间大于等于当前时间的Job放入到对应的Ready Queue
- * @author yunyou
+ * @author Jashin
  */
 @Component
 @RequiredArgsConstructor

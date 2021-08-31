@@ -11,7 +11,7 @@ import java.io.Serializable;
 
 /**
  * 任务对象 用来存放所有Job的元信息
- * @author yunyou
+ * @author Jashin
  */
 
 @Data
